@@ -4804,6 +4804,11 @@ with profile.test_list.group_manager(
     g(['arb_post_depth_coverage-sample-shading'])
 
 with profile.test_list.group_manager(
+        PiglitGLTest,
+        grouptools.join('spec', 'arb_robustness_isolation')) as g:
+    g(['arb_robustness_isolation-basic'])
+
+with profile.test_list.group_manager(
     PiglitGLTest,
     grouptools.join('spec', 'arb_shader_image_size')) as g:
     g(['arb_shader_image_size-builtin'], 'builtin')

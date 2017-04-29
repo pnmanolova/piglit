@@ -1,0 +1,26 @@
+include_directories(
+	${GLEXT_INCLUDE_DIR}
+	${OPENGL_INCLUDE_PATH}
+)
+
+if(PIGLIT_BUILD_GLX_TESTS)
+	link_libraries (
+		piglitglxutil
+	)
+endif(PIGLIT_BUILD_GLX_TESTS)
+
+link_libraries (
+	${OPENGL_gl_LIBRARY}
+)
+
+IF(PIGLIT_BUILD_GLX_TESTS)
+	include_directories(
+		${GLPROTO_INCLUDE_DIRS}
+	)
+	link_libraries (
+		${X11_X11_LIB}
+	)
+	piglit_add_executable (arb_robustness_isolation-basic basic.c)
+ENDIF(PIGLIT_BUILD_GLX_TESTS)
+
+# vim: ft=cmake:

@@ -426,7 +426,7 @@ int
 piglit_glx_get_error(Display *dpy, XErrorEvent *err)
 {
 	static int errbase, evbase;
-	
+
 	if (!errbase)
 		glXQueryExtension(dpy, &errbase, &evbase);
 

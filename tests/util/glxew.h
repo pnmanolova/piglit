@@ -411,6 +411,16 @@ typedef GLXContext ( * PFNGLXCREATECONTEXTATTRIBSARBPROC) (Display* dpy, GLXFBCo
 
 #endif /* GLX_ARB_create_context_robustness */
 
+
+#ifndef GLX_ARB_robustness_application_isolation
+#define GLX_ARB_robustness_application_isolation 1
+#define GLX_CONTEXT_RESET_ISOLATION_BIT_ARB 0x00000008
+#endif /* GLX_ARB_robustness_application_isolation */
+
+#ifndef GLX_ARB_robustness_share_group_isolation
+#define GLX_ARB_robustness_share_group_isolation 1
+#endif /* GLX_ARB_robustness_share_group_isolation */
+
 /* ------------------------- GLX_ARB_fbconfig_float ------------------------ */
 
 #ifndef GLX_ARB_fbconfig_float
